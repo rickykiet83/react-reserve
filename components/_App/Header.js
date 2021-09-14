@@ -1,7 +1,12 @@
 import { Container, Icon, Image, Menu } from 'semantic-ui-react';
+import Router, { useRouter } from 'next/router';
 
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import NProgress from 'nprogress';
+
+Router.onRouteChangeStart = () => NProgress.start();
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 function Header() {
   const router = useRouter();
