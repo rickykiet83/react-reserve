@@ -1,15 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-
 function Home({ products }) {
-  console.log(products);
-  // React.useEffect(() => {
-  //   getProducts();
-  // }, []);
-
-  // async function getProducts() {}
-
-  return <>home</>;
+  return <>Home</>;
 }
 
 Home.getInitialProps = async () => {
